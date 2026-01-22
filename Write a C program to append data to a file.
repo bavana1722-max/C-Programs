@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main()
+{
+    FILE *fp;
+    char text[50];
+
+    fp = fopen("data.txt", "a");
+    scanf("%s", text);
+    fprintf(fp, "%s\n", text);
+    fclose(fp);
+
+    return 0;
+}
