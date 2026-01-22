@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+struct product
+{
+    int id;
+    int qty;
+};
+
+int main()
+{
+    struct product p;
+    FILE *fp;
+
+    fp = fopen("inventory.txt", "w");
+    scanf("%d %d", &p.id, &p.qty);
+    fprintf(fp, "Product ID: %d\nQuantity: %d", p.id, p.qty);
+    fclose(fp);
+
+    return 0;
+}
