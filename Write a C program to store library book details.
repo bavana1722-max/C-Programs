@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+struct book
+{
+    int book_id;
+    char title[20];
+};
+
+int main()
+{
+    struct book b;
+    scanf("%d %s", &b.book_id, b.title);
+    printf("Book ID: %d\nTitle: %s", b.book_id, b.title);
+    return 0;
+}
