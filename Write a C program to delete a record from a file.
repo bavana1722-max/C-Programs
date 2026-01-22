@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    FILE *fp, *temp;
+    char name[20], fileName[20];
+
+    fp = fopen("students.txt", "r");
+    temp = fopen("temp.txt", "w");
+
+    scanf("%s", name);
+
+    while (fscanf(fp, "%s", fileName) != EOF)
+    {
+        if (strcmp(name, fileName) != 0)
+            fprintf(temp, "%s\n", fileName);
+    }
+
+    fclose(fp);
+    fclose(temp);
+
+    remove("students.txt");
+    rename("temp.txt", "students.txt");
+
+    printf("Record Deleted");
+    return 0;
+}
