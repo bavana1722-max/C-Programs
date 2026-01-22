@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main()
+{
+    FILE *fp;
+    int id;
+    float salary;
+
+    fp = fopen("employee.txt", "r");
+    fscanf(fp, "%d %f", &id, &salary);
+    printf("ID: %d\nSalary: %.2f", id, salary);
+    fclose(fp);
+
+    return 0;
+}
