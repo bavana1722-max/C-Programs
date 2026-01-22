@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+struct bank
+{
+    int acc_no;
+    float balance;
+};
+
+int main()
+{
+    struct bank b;
+    scanf("%d %f", &b.acc_no, &b.balance);
+    printf("Account No: %d\nBalance: %.2f", b.acc_no, b.balance);
+    return 0;
+}
