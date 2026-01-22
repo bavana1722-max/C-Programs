@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main()
+{
+    FILE *fp;
+    char user[20], pass[20];
+
+    fp = fopen("login.txt", "w");
+    scanf("%s %s", user, pass);
+    fprintf(fp, "%s %s", user, pass);
+    fclose(fp);
+
+    return 0;
+}
