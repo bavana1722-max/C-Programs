@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+void menu()
+{
+    printf("1. Add\n");
+    printf("2. Subtract\n");
+    printf("3. Exit\n");
+}
+
+int main()
+{
+    menu();
+    return 0;
+}
