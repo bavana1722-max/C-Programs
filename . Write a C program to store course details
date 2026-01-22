@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+struct course
+{
+    int course_id;
+    char course_name[20];
+};
+
+int main()
+{
+    struct course c;
+    scanf("%d %s", &c.course_id, c.course_name);
+    printf("Course ID: %d\nCourse Name: %s", c.course_id, c.course_name);
+    return 0;
+}
